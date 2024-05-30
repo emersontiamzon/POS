@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.1.1" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\Point.Of.Sale.Persistence\Point.Of.Sale.Persistence.csproj" />
+        <ProjectReference Include="..\Point.Of.Sale.Retries\Point.Of.Sale.Retries.csproj" />
+        <ProjectReference Include="..\Point.Of.Sale.Shared\Point.Of.Sale.Shared.csproj" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Folder Include="Handlers\Query\" />
+        <Folder Include="Models\" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Compile Remove="obj\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <EmbeddedResource Remove="obj\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <None Remove="obj\**" />
+    </ItemGroup>
+
+
+</Project>
